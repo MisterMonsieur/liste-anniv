@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2{
+  color: white;
+  margin-bottom: 30px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px 20px; /* ← ligne = 40px, colonne = 20px */
+  margin-top: 30px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* centrage vertical */
+  height: 100%;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card p {
+  margin: 5px 0;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 0 10px;
+  }
+}
+
+.praythesun{
+  max-width: 10%;
+}
+
+/*****************************dégradé de bleu uniforme*********************************/
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #6dd5ed, #bdefff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 20s ease infinite;
+
+  color: white;
+}
+
+/* Animation du fond */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*****************************************************************/
+body {
+  
+  position: relative;
+
+  color: #000000; /* texte plus clair */
+  background-color: #0a0f1c;
+  overflow-x: hidden;
+  
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 30%, #6dd5ed, transparent),
+              radial-gradient(circle at 70% 70%, #2a5298, transparent),
+              radial-gradient(circle at 50% 50%, #1e3c72, transparent),
+              radial-gradient(circle at 80% 20%, #bdefff, transparent);
+  background-blend-mode: screen;
+  animation: plasmaGradient 20s ease-in-out infinite;
+  z-index: -1;
+  filter: blur(50px);         /* ↓ flou diminué */
+  opacity: 0.3;               /* ↓ transparence */
+  pointer-events: none;
+}
+
+@keyframes plasmaGradient {
+  0% {
+    transform: scale(1) translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) translate(50px, 50px) rotate(180deg);
+  }
+  100% {
+    transform: scale(1) translate(0, 0) rotate(360deg);
+  }
+}
+
+.body{
+font-family: 'Courier New', Courier, monospace;
+font-size: large;
+}
